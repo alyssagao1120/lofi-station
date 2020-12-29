@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lo-fi Station</title>
+    <!-- Load FontAwesome icons -->
+    <link rel="stylesheet" 
+    href= 
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> 
+
+    <link rel="stylesheet" type="text/css" href="{% static 'music_player/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'music_player/favicon/favicon.png' %}"/>
+
+    
+</head>
+
+<style>
+    body {
+      background-image: url('/media/{{artwork.file}}');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+</style>
+
+<body class="full-screen">
+
+    <div id="bg"></div>
+
+    {{ songs|json_script:"songs-data" }} 
+
+    <!-- <div class="header">
+        <a href ="/" class="logo">
+            <img src="{% static 'music_player/images/logo.png' %}" width="75" >
+        </a>       
+    </div>
+
+    <div class="nav">
+      <input type="checkbox">
+      <span></span>
+      <span></span>
+      <div class="menu">
+          <li><a href="/all-songs">songs</a></li>
+          <li><a href="/all-artworks">artworks</a></li>
+          <li><a href="/submit-artwork">submit artworks</a></li>
+          <li><a href="#">open source</a></li>
+      </div>
+    </div> -->
+
+    <br><br><br><br><br><br>
+    <div class="player">
+        <div class="details">
+          <!-- <div class="radio_art">
+            <img src="/media/{{artwork.file}}" alt="{{artwork.title}}">
+          </div> -->
+          <!-- <div class="now-playing">PLAYING x OF y</div> -->
+          <!-- <div class="track-art"></div> -->
+          <div class="track-name">Track Name</div>
+          <div class="track-artist">Track Artist</div>
+        </div>
+        <div class="buttons">
+          <!-- <div class="prev-track" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div> -->
+            <div class="prev-track" onclick="prevTrack()"> 
+                <img class="previous_button" src = "{% static 'music_player/images/previous button.png' %}" width="40">
+            </div>
+          <!-- <div class="playpause-track" onclick="playpauseTrack()"><i class="fa fa-play-circle fa-5x"></i></div> -->
+            <div class="playpause-track" onclick="playpauseTrack()"> 
+                <img class="play_button" src = "{% static 'music_player/images/play.png' %}" width="40">
+            </div>
+            <div class="next-track" onclick="nextTrack()"> 
+                <img class="next_button" src = "{% static 'music_player/images/next button.png' %}" width="40">
+            </div>
+          <!-- <div class="next-track" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div> -->
+        </div>
+        <div class="slider_container">
+          <div class="current-time">00:00</div>
+          <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+          <div class="total-duration">00:00</div>
+        </div>
+        <div class="slider_container">
+          <i class="fa fa-volume-down"></i>
+          <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+          <i class="fa fa-volume-up"></i>
+        </div>
+        <div class="navigation-buttons">
+            <a href="/" class="nav-btn return-home">return to homepage</a>
+            <a href="{% url 'set_artwork_for_music_player' artwork.id %}" class="nav-btn full-screen">exit full screen</a>
+        </div>
+      </div>
+      <br><br><br>
+      
+      <!-- Load the main script for the player -->
+      <script type="text/javascript" src="{% static 'music_player/jquery-3.5.1.min.js' %}"></script>
+      <script language="JavaScript" type="text/javascript" src="{% static 'music_player/myscript.js' %}"></script>
+      <script language="JavaScript" type="text/javascript" src="{% static 'music_player/full_screen_script.js' %}"></script>
+  </body> 

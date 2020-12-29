@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lo-fi Station</title>
+     <link rel="stylesheet" href="{% static 'home/style.css' %}">
+     <link rel="shortcut icon" href="{% static 'home/favicon/favicon.png' %}"/>
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript" ></script>
+
+</head>
+<div class="nav">
+    <input type="checkbox">
+    <span></span>
+    <span></span>
+    <div class="menu">
+        <li><a href="all-songs">songs</a></li>
+        <li><a href="/all-artworks">artworks</a></li>
+        <li><a href="/submit-artwork">submit artworks</a></li>
+        <li><a href="#">open source</a></li>
+    </div>
+</div>
+
+<body>
+    <div class="heading">
+        <h1>lo-fi station</h1>
+    </div>
+    
+    <div class="buttons">
+        <a href="play-music" class="btn play">shuffle</a>
+        <!-- <a href="#" class="btn customize">customize</a> -->
+    </div>
+    <p>Created By: Alyssa Gao</p>
+
+    <!-- Play Background Music-->
+    <audio autoplay loop>
+        <source src="../../static/home/music/background-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script type="text/javascript">
+        var images = ['1.gif', '2.gif', '3.gif', '4.gif', '5.gif', '6.gif', '7.gif', '8.gif', '9.gif'];
+        $('body').css({'background-image': 'url(../../static/home/images/' + images[Math.floor(Math.random() * images.length)] + ')'});
+    </script>
+</body>
+</html>

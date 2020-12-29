@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Inconsolata:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+.buttons {
+    text-align: center;
+    padding-top: 1px;
+    /* padding-bottom: 3px; */
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 100px;
+    /* box-shadow: 0 8px 15px rgba(0,0,0,.2); */
+    text-decoration: none;
+    margin-top: 5vh;
+
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    transition: 0.2s
+}
+
+
+.btn {
+    background-color: rgb(137, 124, 196);
+    color:white;
+    padding: 20px 5vw;
+    font-size: 1.5rem;
+    font-family: 'Inconsolata', monospace;
+    cursor: pointer;
+    margin-left:2vh;
+    margin-right:2vh;
+    border-radius: 50px;
+    text-shadow: 2px 2px #1b1b1b;
+    border-color: white white;
+    border-style: solid;
+    transition: 0.2s
+}
+
+a {
+    text-decoration: none;
+    /* border-color: white white;
+    border-style: solid; */
+}
+
+.btn:hover {
+    transition: 0.5s;
+    background-color: rgb(189, 171, 183);
+}
+
+.heading {
+    font-size: 1.5rem;
+    /* font-family: 'Caveat', cursive; */
+    /* font-family: 'Patrick Hand', cursive; */
+    font-family: 'Inconsolata', monospace;
+    font-weight: 900;
+    /* line-height: 400px; */
+    text-align: center;
+    margin-top: 20rem;
+    color: white;
+    text-shadow: 2px 2px #2e2e2e;
+    
+    
+}
+
+
+body{
+    /* background-image: url('images/homepage-background.gif'); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: background-color .5s; 
+    /* justify-content: space-around; */
+}
+
+p {
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.5rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    /* margin-top: -5vw; */
+    text-shadow: 2px 2px #1b1b1b;
+}
+
+
+
+
+.nav, .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    
+}
+
+
+.nav {
+    position: absolute;
+    background-color: #fff;
+    padding: 0.5rem;
+    transition: 0.5s;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+    margin-top: 2vh;
+    
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.nav input:checked ~ .menu {
+    width: 80vw;    
+}
+
+.menu li {
+    list-style: none;
+    margin:  15px;
+    text-align: center;
+    
+}
+
+.menu li a {
+    text-decoration: none;
+    color:black;
+    font-family: 'Inconsolata', monospace;
+    /* text-transform: uppercase; */
+    font-size:calc(2px + 1rem);
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.menu li a:hover {
+    color: rgb(137, 124, 196);
+    font-weight: 900;
+}
+
+.nav input {
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.nav span {
+    position: absolute;
+    left: 25px;
+    width: 25px;
+    height: 0.5rem;
+    border-radius: 50px;
+    background-color: rgb(137, 124, 196);
+    pointer-events: none;
+    transition: 0.5s;
+    /* display: inline-block; */
+}
+
+.nav:hover span {
+        background-color: rgb(62, 56, 88);
+
+}
+
+/* .nav input:checked ~ span {
+    background-color: rgb(137, 124, 196);
+} */
+
+.nav span:nth-child(2) {
+    transform: translateY(-6px);
+}
+
+.nav input:checked ~ span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+.nav span:nth-child(3) {
+    transform: translateY(6px);
+}
+
+.nav input:checked ~ span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}

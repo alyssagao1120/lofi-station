@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lo-fi Station | Submit Artwork</title>
+     <link rel="stylesheet" href="{% static 'submit_artwork/style.css' %}">
+     <link rel="shortcut icon" href="{% static 'all_songs/favicon/favicon.png' %}"/>
+</head>
+
+
+<body>
+    <div class="header">
+        <a href ="/" class="logo">
+            <img src="{% static 'all_songs/images/logo.png' %}" width="75" >
+        </a>
+        <div class="nav">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <div class="menu">
+                <li><a href="/all-songs">songs</a></li>
+                <li><a href="/all-artworks">artworks</a></li>
+                <li><a href="/submit-artwork">submit artworks</a></li>
+                <li><a href="#">open source</a></li>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <div >
+        <img class="thank-you-image" src="/media/images/thank-you-logo.png" width="300">
+    </div>
+    <h1>thank you for submitting!</h1>
+    <div class="thank-you-message">
+        <p>
+            your artwork is now waiting to be approved. 
+            <br>
+            once approved, you can click on 'artworks' to view your artwork.
+            <br>
+            if your artwork has still not been processed for the last 14 days, please contact
+            <a href="mailto:alyssa.gao@uwaterloo.ca">alyssa gao</a>
+        </p>
+    </div>
+    <br>
+    <div class="buttons">
+        <a href="/" class="btn return-home">return home</a>
+        <a href="/play-music" class="btn music-player">play music</a>
+    </div>
+    <br><br><br>
+</body>
+<footer class="main-footer">
+    <small class="footer-message">Made with 💖 by Alyssa Gao</small>
+    <br>
+    <small class="copyright">Copyright &copy; 2021 All Rights Reserved</small>
+</footer>
