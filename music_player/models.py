@@ -20,7 +20,7 @@ class Artwork(models.Model):
     title = models.CharField(max_length=500, default="Untitled")
     description = models.TextField()
     artist = models.CharField(max_length=500, default="Unknown")
-    file = models.FileField()
+    file = models.FileField(upload_to="artworks/")
     approved = models.BooleanField(default=False)
 
     # toString() function
