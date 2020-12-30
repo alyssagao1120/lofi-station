@@ -21,15 +21,15 @@ let curr_track = document.createElement('audio');
 
 // Define the tracks that have to be played
 var songs = JSON.parse(JSON.parse(document.getElementById('songs-data').textContent));;
-for(var i = 0; i < songs.length; i += 1) {
-    console.log("Song: " + songs[i]["fields"].song_title);
-}
+// for(var i = 0; i < songs.length; i += 1) {
+//     console.log("Song: " + songs[i]["fields"].song_title);
+// }
   
   function loadTrack(track_index) {
     clearInterval(updateTimer);
     resetValues();
     // curr_track.src = track_list[track_index].path;
-    curr_track.src = "../../static/music_player/music/" +  songs[track_index]["fields"].file_name + "." + songs[track_index]["fields"].file_type;
+    curr_track.src = "/media/" +  songs[track_index]["fields"].file.toString();
     curr_track.load();
   
     // track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
@@ -39,7 +39,6 @@ for(var i = 0; i < songs.length; i += 1) {
   
     updateTimer = setInterval(seekUpdate, 1000);
     curr_track.addEventListener("ended", nextTrack);
-    // random_bg_color();
   }
   
   function resetValues() {
@@ -59,15 +58,13 @@ for(var i = 0; i < songs.length; i += 1) {
   function playTrack() {
     curr_track.play();
     isPlaying = true;
-    // playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
-    playpause_btn.innerHTML = '<img class="pause_button" src = "../../static/music_player/images/pause.png" width="40">';
+    playpause_btn.innerHTML = '<img class="pause_button" src = "/media/website/pause.png" width="40">';
   }
   
   function pauseTrack() {
     curr_track.pause();
     isPlaying = false;
-    // console.log ('<img src ="{% static \'music_player/images/play.png\' %}" width="75">');
-    playpause_btn.innerHTML = '<img class="play_button" src = "../../static/music_player/images/play.png" width="40">';
+    playpause_btn.innerHTML = '<img class="play_button" src = "/media/website/play.png" width="40">';
   }
   
   function nextTrack() {

@@ -10,12 +10,11 @@ import random
 class Song(models.Model):
     song_title = models.CharField(max_length=200)
     artist = models.CharField(max_length=200)
-    file_name = models.CharField(max_length=200)
-    file_type = models.CharField(max_length=10, choices=[('mp3', 'mp3'), ('wav', 'wav'), ('ogg', 'ogg')])
+    file = models.FileField(upload_to="songs/")
 
     # toString() function
     def __str__(self):
-        return f"'{self.song_title}' By: {self.artist}, File Name: {self.file_name}.{self.file_type}"
+        return f"'{self.song_title}' By: {self.artist}"
 
 class Artwork(models.Model):
     title = models.CharField(max_length=500, default="Untitled")

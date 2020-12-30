@@ -1,5 +1,5 @@
 body { 
-    background-image: url('images/all_songs_background.gif');
+    background-image: url('/media/website/all_songs_background.gif');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;

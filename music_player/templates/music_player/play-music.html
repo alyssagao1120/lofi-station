@@ -10,7 +10,7 @@
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> 
 
     <link rel="stylesheet" type="text/css" href="{% static 'music_player/style.css' %}">
-    <link rel="shortcut icon" href="{% static 'music_player/favicon/favicon.png' %}"/>
+    <link rel="shortcut icon" href="/media/website/favicon.png"/>
 
     
 </head>
@@ -25,7 +25,7 @@
     </script> -->
     <div class="header">
         <a href ="/" class="logo">
-            <img src="{% static 'music_player/images/logo.png' %}" width="75" >
+          <img src="/media/website/logo.png" width="75">>
         </a>       
     </div>
 
@@ -55,14 +55,14 @@
         <div class="buttons">
           <!-- <div class="prev-track" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div> -->
             <div class="prev-track" onclick="prevTrack()"> 
-                <img class="previous_button" src = "{% static 'music_player/images/previous button.png' %}" width="40">
+                <img class="previous_button" src = "/media/website/previous button.png" width="40">
             </div>
           <!-- <div class="playpause-track" onclick="playpauseTrack()"><i class="fa fa-play-circle fa-5x"></i></div> -->
             <div class="playpause-track" onclick="playpauseTrack()"> 
-                <img class="play_button" src = "{% static 'music_player/images/play.png' %}" width="40">
+                <img class="play_button" src = "/media/website/play.png" width="40">
             </div>
             <div class="next-track" onclick="nextTrack()"> 
-                <img class="next_button" src = "{% static 'music_player/images/next button.png' %}" width="40">
+                <img class="next_button" src = "/media/website/next button.png" width="40">
             </div>
           <!-- <div class="next-track" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div> -->
         </div>
