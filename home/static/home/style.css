@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Inconsolata:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+.homepage-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
 
 .buttons {
     text-align: center;
     padding-top: 1px;
-    /* padding-bottom: 3px; */
     padding-left: 10px;
     padding-right: 10px;
-    margin-bottom: 100px;
-    /* box-shadow: 0 8px 15px rgba(0,0,0,.2); */
     text-decoration: none;
-    margin-top: 5vh;
-
     display: flex;
     margin: 0;
     padding: 0;
@@ -24,8 +24,8 @@
 .btn {
     background-color: rgb(137, 124, 196);
     color:white;
-    padding: 20px 5vw;
-    font-size: 1.5rem;
+    padding: 1rem 5vw;
+    font-size: 1rem;
     font-family: 'Inconsolata', monospace;
     cursor: pointer;
     margin-left:2vh;
@@ -39,8 +39,6 @@
 
 a {
     text-decoration: none;
-    /* border-color: white white;
-    border-style: solid; */
 }
 
 .btn:hover {
@@ -50,13 +48,10 @@ a {
 
 .heading {
     font-size: 1.5rem;
-    /* font-family: 'Caveat', cursive; */
-    /* font-family: 'Patrick Hand', cursive; */
     font-family: 'Inconsolata', monospace;
     font-weight: 900;
-    /* line-height: 400px; */
     text-align: center;
-    margin-top: 20rem;
+    margin-top: 15rem;
     color: white;
     text-shadow: 2px 2px #2e2e2e;
     
@@ -65,7 +60,6 @@ a {
 
 
 body{
-    /* background-image: url('images/homepage-background.gif'); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -74,20 +68,19 @@ body{
     align-items: center;
     flex-direction: column;
     transition: background-color .5s; 
-    /* justify-content: space-around; */
+    justify-content: space-around;
 }
 
 p {
     font-family: 'Inconsolata', monospace;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
     color: rgb(255, 255, 255);
-    /* margin-top: -5vw; */
+    margin-top: -3vh;
     text-shadow: 2px 2px #1b1b1b;
 }
 
-
-
+/* Navigation Bar */
 
 .nav, .menu {
     display: flex;
@@ -96,7 +89,6 @@ p {
     height: 2.5rem;
     
 }
-
 
 .nav {
     position: absolute;
@@ -134,7 +126,7 @@ p {
     color:black;
     font-family: 'Inconsolata', monospace;
     /* text-transform: uppercase; */
-    font-size:calc(2px + 1rem);
+    font-size: 2.5vh;
     font-weight: 600;
     transition: 0.5s;
 }

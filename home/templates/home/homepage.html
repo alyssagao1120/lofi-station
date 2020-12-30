@@ -10,6 +10,7 @@
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript" ></script>
 
 </head>
+
 <div class="nav">
     <input type="checkbox">
     <span></span>
@@ -21,23 +22,24 @@
         <li><a href="#">open source</a></li>
     </div>
 </div>
-
 <body>
-    <div class="heading">
-        <h1>lo-fi station</h1>
-    </div>
+    <div class="homepage-items">
+            <div class="heading">
+                <h1>lo-fi station</h1>
+                <p>Created By: Alyssa Gao</p>
+            </div>
+        
+        <div class="buttons">
+            <a href="play-music" class="btn play">shuffle</a>
+            <!-- <a href="#" class="btn customize">customize</a> -->
+        </div>
     
-    <div class="buttons">
-        <a href="play-music" class="btn play">shuffle</a>
-        <!-- <a href="#" class="btn customize">customize</a> -->
+        <!-- Play Background Music-->
+        <audio autoplay loop>
+            <source src="/media/website/background-music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
     </div>
-    <p>Created By: Alyssa Gao</p>
-
-    <!-- Play Background Music-->
-    <audio autoplay loop>
-        <source src="/media/website/background-music.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
 
     <script type="text/javascript">
         var images = ['1.gif', '2.gif', '3.gif', '4.gif', '5.gif', '6.gif', '7.gif', '8.gif', '9.gif'];
